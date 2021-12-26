@@ -1,6 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const greeting =document.querySelector("#greeting");
+const greeting = document.querySelector("#greeting");
 
 /*string을 반복해서 사용할 땐, 대문자로 const 정의해 주는 게 오타 예방에 도움이 됨.. */
 const HIDDEN_CLASSNAME = "hidden";
