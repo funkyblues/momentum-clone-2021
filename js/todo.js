@@ -7,19 +7,23 @@ const TODOS_KEY = "todos";
 let toDos = [];
 
 function saveToDos() {
-  localStorage.setItem("todos", JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 function deleteToDo(event) {
   const todoLine = event.target.parentElement;
+  // li를 제거하면 li의 id를 얻을 수 있음!!!
+  console.log(todoLine.id);
   todoLine.remove();
 }
 
 /*JavaScript로 HTML 만든거임!!  */
+/*paintToDo에 받는 내용을 객체로 받게 되어서, 함수도 변경해야해~~~!! */
 function paintToDo(newTodo) {
   const todoLine = document.createElement("li");
+  todoLine.id = newTodo.id;
   const span = document.createElement("span");
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
 
   const button = document.createElement("button");
   button.innerText = "❌";
@@ -35,8 +39,12 @@ function handleToDoSubmit(event) {
   event.preventDefault();
   const newTodo = toDoInput.value;
   toDoInput.value = "";
-  toDos.push(newTodo);
-  paintToDo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id : Date.now(),
+  }
+  toDos.push(newTodoObj);
+  paintToDo(newTodoObj);
   saveToDos();
 }
 
@@ -44,7 +52,7 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if (saveToDos !== null) {
+if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
