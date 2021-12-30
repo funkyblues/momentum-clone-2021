@@ -18,3 +18,4 @@ const bgImage = document.createElement("img");
 bgImage.src = `./img/${chosenImage}`; /**폴더에 있는 img 폴더를 말함!*/
 
 document.body.appendChild(bgImage); //body에 html을 추가하는 method!
+bgImage.className = "bg-image";
