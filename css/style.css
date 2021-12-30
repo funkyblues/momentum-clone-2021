@@ -1,3 +1,24 @@
 .hidden {
   display: none;
 }
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+#clock {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 28px;
+}
+
+/* #greeting,
+#todo-form,
+#todo-list,
+#quote */
