@@ -57,3 +57,23 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+function sexyFilter() {
+
+}
+
+// [1, 2, 3, 4].filter(sexyFilter)
+
+
+// [1, 2, 4]!
+// sexyFilter(1) = 1
+// sexyFilter(2) = 2
+// sexyFilter(3) X 3
+// sexyFilter(4) = 4
+
+// const todos = [{text: "hi"}, {text: "hello"}];
+// function sexyFilter(todo) {
+//   return todo.text !== "hi";
+// }
+// todos.filter(sexyFilter);
+
