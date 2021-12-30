@@ -12,8 +12,11 @@ function saveToDos() {
 
 function deleteToDo(event) {
   const todoLine = event.target.parentElement;
+  // 클릭한 todo를 제거하는 라인! 클릭한 todo와 id가 같으면 제거한다.
+  // toDo는 toDos DB에 있는 요소 중 하나
+  toDos = toDos.filter(toDo => toDo.id !== parseInt(todoLine.id));
+  saveToDos();
   // li를 제거하면 li의 id를 얻을 수 있음!!!
-  console.log(todoLine.id);
   todoLine.remove();
 }
 
@@ -77,3 +80,6 @@ function sexyFilter() {
 // }
 // todos.filter(sexyFilter);
 
+// 화살표 함수로 이렇게도 쓸 수 있음
+// const arr = [1, 2, 3, 4];
+// const newArr = arr.filter(item => item > 2);
