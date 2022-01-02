@@ -2,23 +2,55 @@
   display: none;
 }
 
-.bg-image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-
 #clock {
+  display: flex;
+  align-items: center;
   z-index: 1;
   position: fixed;
-  top: 50%;
   left: 50%;
-  font-size: 28px;
+  top: 30%;
+  transform: translate(-50%, -30%);
+  font-size: 84px;
+  font-weight: 600;
+  color: white;
 }
 
-/* #greeting,
-#todo-form,
-#todo-list,
-#quote */
+#login-form {
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  transition: 1s ease-in-out;
+}
+
+#greeting {
+  z-index: 1;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  font-weight: 600;
+  font-size: 100px;
+  color: white;
+}
+#todo-form {
+  z-index: 1;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+}
+#todo-list {
+}
+#quote {
+  z-index: 1;
+  /* position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  top: 70%;
+  left: 40%;
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
