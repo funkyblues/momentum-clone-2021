@@ -8,10 +8,10 @@
   z-index: 1;
   position: fixed;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
+  top: 37%;
+  transform: translate(-50%, -37%);
   -webkit-text-stroke: 0.2px black;
-  font-size: 120px;
+  font-size: 20vmin;
   font-weight: 400;
   color: white;
   animation: Opacity 1s ease-in-out;
@@ -21,18 +21,18 @@
   z-index: 1;
   position: fixed;
   left: 50%;
-  top: 70%;
-  transform: translate(-50%, -70%);
+  top: 60%;
+  transform: translate(-50%, -60%);
   animation: Opacity 1s ease-in-out;
 }
 
 #login-form .login__text {
   margin-top: 100px;
-  width: 300px;
+  width: 400px;
   height: 100px;
   border: 0px;
   text-align: center;
-  font-size: 32px;
+  font-size: 5vmin;
   outline: none;
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
@@ -42,11 +42,12 @@
 #login-form .login__text::placeholder {
   color: #fff;
   -webkit-text-stroke: 0.2px black;
+  animation: Opacity 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #login-form .login__text:focus::placeholder {
-  color: transparent;
-  animation: Opacity 1s ease-in-out;
+  opacity: 0;
 }
 
 @keyframes Opacity {
@@ -62,11 +63,11 @@
   z-index: 1;
   position: fixed;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
-  font-weight: 600;
-  font-size: 100px;
+  top: 53%;
+  transform: translate(-50%, -53%);
+  font-size: 42px;
   color: white;
+  animation: Opacity 1s ease-in-out;
 }
 #todo-form {
   z-index: 1;
