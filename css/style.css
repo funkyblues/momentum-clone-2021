@@ -8,20 +8,54 @@
   z-index: 1;
   position: fixed;
   left: 50%;
-  top: 30%;
-  transform: translate(-50%, -30%);
-  font-size: 84px;
-  font-weight: 600;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  -webkit-text-stroke: 0.2px black;
+  font-size: 120px;
+  font-weight: 400;
   color: white;
+  animation: Opacity 1s ease-in-out;
 }
 
 #login-form {
   z-index: 1;
   position: fixed;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
-  transition: 1s ease-in-out;
+  top: 70%;
+  transform: translate(-50%, -70%);
+  animation: Opacity 1s ease-in-out;
+}
+
+#login-form .login__text {
+  margin-top: 100px;
+  width: 300px;
+  height: 100px;
+  border: 0px;
+  text-align: center;
+  font-size: 32px;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  -webkit-text-stroke: 0.2px black;
+}
+
+#login-form .login__text::placeholder {
+  color: #fff;
+  -webkit-text-stroke: 0.2px black;
+}
+
+#login-form .login__text:focus::placeholder {
+  color: transparent;
+  animation: Opacity 1s ease-in-out;
+}
+
+@keyframes Opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #greeting {
