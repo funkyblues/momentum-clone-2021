@@ -81,8 +81,6 @@
 }
 #quote {
   z-index: 1;
-  min-width: 100%;
-  min-height: 100%;
   display:flex;
   font-size: 2vmin;
   font-weight: 600;
@@ -91,6 +89,7 @@
 }
 
 #quote div {
+  width: 500px;
   padding: 5px 10px;
   background-color: orange;
   z-index: 1;
@@ -100,15 +99,15 @@
 #quote div:first-child {
   position: absolute;
   top: 80%;
-  left: 62%;
-  transform: translate(-80%, -62%);
+  left: 60%;
+  transform: translate(-80%, -60%);
 }
 
 #quote div:last-child {
   position: absolute;
   top: 90%;
-  left: 55%;
-  transform: translate(-90%, -55%);
+  left: 60%;
+  transform: translate(-90%, -60%);
 }
 
 
