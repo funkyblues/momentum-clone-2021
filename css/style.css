@@ -81,23 +81,37 @@
 }
 #quote {
   z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
   display:flex;
-  /* position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
   font-size: 2vmin;
+  font-weight: 600;
   color: white;
+  -webkit-text-stroke: 0.2px black;
 }
 
-#quote span:first-child {
+#quote div {
+  padding: 5px 10px;
+  background-color: orange;
   z-index: 1;
   position: fixed;
-  width: 300px;
-  top: 75%;
-  left:50%;
-  transform: translate(-75%, -50%);
 }
+
+#quote div:first-child {
+  position: absolute;
+  top: 80%;
+  left: 62%;
+  transform: translate(-80%, -62%);
+}
+
+#quote div:last-child {
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  transform: translate(-90%, -55%);
+}
+
+
 
 @keyframes ReverseOpacity {
   from {
