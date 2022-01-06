@@ -5,13 +5,11 @@
 
 #clock {
   display: flex;
-  align-items: center;
   z-index: 1;
   position: fixed;
   left: 50%;
   top: 37%;
   transform: translate(-50%, -37%);
-  -webkit-text-stroke: 0.2px black;
   font-size: 20vmin;
   font-weight: 400;
   color: white;
@@ -35,17 +33,15 @@
   outline: none;
   background-color: rgba(0, 0, 0, 0);
   color: #fff;
-  -webkit-text-stroke: 0.2px black;
 }
 
 #login-form .login__text::placeholder {
   color: #fff;
-  -webkit-text-stroke: 0.2px black;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #login-form .login__text::placeholder.submitted {
-  transition: 1s ease-in-out
+  transition: 1s ease-in-out;
 }
 
 #login-form .login__text:focus::placeholder {
@@ -80,37 +76,36 @@
 #todo-list {
 }
 #quote {
-  z-index: 1;
-  display:flex;
-  font-size: 2vmin;
+  font-size: 1.5vmin;
   font-weight: 600;
   color: white;
-  -webkit-text-stroke: 0.2px black;
+  transition: 1s ease-in-out;
 }
 
 #quote div {
-  width: 500px;
   padding: 5px 10px;
-  background-color: orange;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
+  text-align: center;
+  vertical-align: middle;
 }
 
 #quote div:first-child {
-  position: absolute;
-  top: 80%;
-  left: 60%;
-  transform: translate(-80%, -60%);
+  width: 600px;
+  position: fixed;
+  top: 95%;
+  left: 68%;
+  transform: translate(-95%, -68%);
 }
 
 #quote div:last-child {
-  position: absolute;
-  top: 90%;
-  left: 60%;
-  transform: translate(-90%, -60%);
+  width: 300px;
+  position: fixed;
+  font-size: 1vmin;
+  top: 98%;
+  left: 65%;
+  transform: translate(-98%, -65%);
 }
-
-
 
 @keyframes ReverseOpacity {
   from {
@@ -122,6 +117,5 @@
 }
 
 #login-form .login__text.submitted {
-  animation: ReverseOpacity .3s ease-in-out forwards;
+  animation: ReverseOpacity 0.3s ease-in-out forwards;
 }
-
